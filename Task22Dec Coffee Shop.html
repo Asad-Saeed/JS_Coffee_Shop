@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task22Dec</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* CSS */
+      #show {
+        height: 50px;
+        width: 50%;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Task Coffee Shop</h1>
+      <table class="table table-bordered text-left">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Coffee Brands</th>
+            <th scope="col">Prices</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Death Wish Coffee</th>
+            <td>200</td>
+            <td><input type="number" id="data1" class="form-control" /></td>
+          </tr>
+          <tr>
+            <th scope="row">StarBuck French Coffee</th>
+            <td>250</td>
+            <td><input type="number" id="data2" class="form-control" /></td>
+          </tr>
+          <tr>
+            <th scope="row">Rising SunBrazil Peaberry</th>
+            <td>300</td>
+            <td><input type="number" id="data3" class="form-control" /></td>
+          </tr>
+          <tr>
+            <th scope="row">Lavazza Super Camera Espresse</th>
+            <td>350</td>
+            <td><input type="number" id="data4" class="form-control" /></td>
+          </tr>
+          <tr>
+            <th scope="row">Hawaiian Gold Kona Gourmet Blend</th>
+            <td>280</td>
+            <td>
+              <input type="number" id="data5" class="form-control" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Sub Function -->
+      <div class="container bg-info">
+        <div class="form form-group p-5 d-flex">
+          <button class="btn btn-success px-4 mx-2" onclick="Total()">
+            Total Cost
+          </button>
+          <!-- <input type="text" id="show" class="" /> -->
+          <div id="show" class="text-uppercase"></div>
+          <button
+            class="btn btn-success px-4 mx-2"
+            onclick="window.location.reload()"
+          >
+            <!-- Built in Function  window.location.reload() -->
+            Clear Screen
+          </button>
+          <button class="btn btn-dark px-4 mx-2" onclick="Submit()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function Total() {
+        var Quant1 = document.getElementById("data1").value;
+        var Quant2 = document.getElementById("data2").value;
+        var Quant3 = document.getElementById("data3").value;
+        var Quant4 = document.getElementById("data4").value;
+        var Quant5 = document.getElementById("data5").value;
+
+        var Tot1 = 200 * Quant1;
+        var Tot2 = 250 * Quant2;
+        var Tot3 = 300 * Quant3;
+        var Tot4 = 350 * Quant4;
+        var Tot5 = 280 * Quant5;
+        var TotAll = Tot1 + Tot2 + Tot3 + Tot4 + Tot5;
+        document.getElementById("show").innerHTML =
+          "<h1>The total is= " + TotAll + "</h1> ";
+      }
+      //   Also User This && Built in window.location.reload()
+      //   function Clear() {
+      //     document.getElementById("show").innerHTML = " ";
+      //   }
+      function Submit() {
+        // USe Both As per Required
+        confirm("Are You Confirmed To Submit It?");
+        // window.open("Submit.html");
+      }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
